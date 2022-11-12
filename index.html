@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/tab-logo.png">
+    <title>Glassmorphism generator</title>
+</head>
+<body>
+    <main>
+        <h1>Glassmorphism Generator</h1>
+        <div id="main_engine">
+            <form id="options">
+                <h3>Create your Glassmorphism effect:</h3>
+                <span>
+                    <label for="opacity_option">Opacity: </label>
+                    <input type="range" id="opacity_option" value="20" oninput="backgroundColor()">
+                </span>
+                <span>
+                    <label for="blur_option">Blur: </label>
+                    <input type="range" id="blur_option" value="20" oninput="blurOption()">
+                </span>
+                <span>
+                    <label for="color_option">Color: </label>
+                    <input type="color" id="color_option" value="#D0DCEC" oninput="backgroundColor()">
+                </span>
+                <span>
+                    <label for="text_color_option">Text color: </label>
+                    <input type="color" id="text_color_option" value="#FFFFFF" oninput="textColor()">
+                </span>
+            </form>
+            <div id="glassmorphism_example">
+                <h3>Your code: </h3>
+                <p id="code_text">
+                    <span id="background_color_code">background: rgba(255, 255, 255, 0.16);</span>
+                    <span id="text_color_code">color: #FFFFFF;</span>
+                    <span id="blur_code_1">backdrop-filter: blur(2.86px);</span>
+                    <span id="blur_code_2">-webkit-backdrop-filter: blur(2.86px);</span>
+                    <span>border: 1px solid rgba(255, 255, 255, 0.3);</span>
+                </p>
+                <button onclick="copyCode()">Copy to clipboard</button>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
