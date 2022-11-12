@@ -71,11 +71,15 @@ button {
     cursor: pointer;
     color: #ffffff;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    transition: all ease-in 0.2s;
+    transition: all ease-in 100ms;
 }
 
 button:hover {
     background-color: #0194e9;
+}
+
+button:active {
+    transform: scale(0.9);
 }
 
 div h3 {
