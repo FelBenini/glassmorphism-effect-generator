@@ -35,3 +35,9 @@ function copyCode() {
     let code_text = document.getElementById("code_text")
     navigator.clipboard.writeText(code_text.textContent);
 }
+
+const copy_button = document.getElementById("copy_clipboard");
+
+copy_button.addEventListener("click", function() {
+    copy_button.textContent = "Copied!"
+})
